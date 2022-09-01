@@ -19,6 +19,8 @@ const alcoholicBtn = document.getElementById("alcoholic")
 const nonAlcoholicBtn = document.getElementById("non-alcoholic")
 const drinksContainer = document.getElementById("drinks-container")
 const loadDataBtn = document.querySelectorAll('.loadDataBtn')
+const preferenceText = document.getElementById('preference')
+const searchResultTag = document.getElementById('search-result')
 
 // load alcoholic information
 const loadDrinksData =  async (id) => {
@@ -52,13 +54,13 @@ const displayData =  (alcoholData) =>{
 }
 
 
-
-
-
-
 // passing button id to load function
 for(const btn of loadDataBtn){
     btn.addEventListener("click", (e)=>{
+      const selectPrefText = e.target.parentNode.parentNode.children[0].innerText
+      console.log(selectPrefText);
+      searchResultTag.classList.remove('hidden')
         loadDrinksData(e.target.id)
+        preferenceText.innerText = selectPrefText
     })
 }
