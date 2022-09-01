@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="lofi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Favourite Drinks</title>
+    <!-- Daisy ui and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="bg-neutral-100 h-72 py-8">
+        <div class="container mx-auto">
+            <h1 class="text-center font-semibold text-3xl">Welcome To Amazing Bar</h1>
+            <div class="serach-wrapper my-10 ">
+                <div class="form-control w-full max-w-xs mx-auto">
+                    <label class="label">
+                      <span class="label-text">Search Your Favorite Drinks</span>
+                      <span class="label-text-alt"> Press <kbd class="kbd kbd-sm"> Enter</kbd></span>
+                    </label>
+                    <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                  </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="drinks-variations-area my-10">
+            <div class="container mx-auto">
+               <h1 class="text-center font-semibold text-2xl py-8">Select Your Preference</h1>
+                <div class="grid grid-cols-3 gap-20">
+                  <div class="card  bg-base-100 shadow-xl">
+                    <img src="./images/pexels-prem-pal-singh-tanwar-602750.jpg" class="h-96 object-cover" alt="" />
+                    <div class="items-center flex justify-between px-4 py-10">
+                      <h2 class="card-title">Alcoholic</h2>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary loadDataBtn" id="alcoholic">Check Drinks</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-base-100 shadow-xl">
+                    <img src="./images/pexels-isabella-mendes-338713.jpg" class="h-96 object-cover" alt="Shoes" />
+                    <div class="items-center flex justify-between px-4 py-10">
+                      <h2 class="card-title">Non - Alcoholic</h2>
+                      <div class="card-actions justify-end">
+                        <button  class="btn btn-primary loadDataBtn" id="non_alcoholic">Check Drinks</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card  bg-base-100 shadow-xl">
+                  <img src="./images/pexels-valeria-boltneva-684963.jpg" class="h-96 object-cover" alt="Shoes" />
+                    <div class="items-center flex justify-between px-4 py-10">
+                      <h2 class="card-title">Occasional- Alcoholic</h2>
+                      <div class="card-actions justify-end">
+                        <button  class="btn btn-primary  loadDataBtn" id="optional_alcohol ">Check Drinks</button>
+                      </div>
+                    </div>
+                  </div>
+            
+                </div>
+            </div>
+
+        </section>
+
+        <section class="drinks-grid-area my-10">
+           <div class="container mx-auto">
+              <div class="grid grid-cols-4 gap-20" id="drinks-container">
+                <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                 
+                </div>
+              </div>
+           </div>
+        </section>
+
+    </main>
+
+ 
+    <script src="./js/app.js"></script>
+</body>
+</html>
